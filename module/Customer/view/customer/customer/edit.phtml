@@ -1,0 +1,41 @@
+<?php
+// module/Customer/view/customer/customer/edit.phtml:
+
+$title = 'Edit customer';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+
+<?php
+$form = $this->form;
+$form->setAttribute('action', $this->url(
+    'customer',
+    array(
+        'action' => 'edit',
+        'id'     => $this->id,
+    )
+));
+$form->prepare();
+
+echo $this->form()->openTag($form);
+echo $this->formHidden($form->get('id'));
+echo $this->formRow($form->get('email'));
+echo '<br>';
+echo $this->formRow($form->get('company'));
+echo '<br>';
+echo $this->formRow($form->get('name_last'));
+echo '<br>';
+echo $this->formRow($form->get('name_first'));
+echo '<br>';
+echo $this->formRow($form->get('phone'));
+echo '<br>';
+echo $this->formRow($form->get('address'));
+echo '<br>';
+echo $this->formRow($form->get('city'));
+echo '<br>';
+echo $this->formRow($form->get('state'));
+echo '<br>';
+echo $this->formRow($form->get('postal'));
+echo '<br>';
+echo $this->formSubmit($form->get('submit'));
+echo $this->form()->closeTag();

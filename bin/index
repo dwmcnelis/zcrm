@@ -1,0 +1,6 @@
+#! /bin/bash
+#
+# index => # GET /api/v1/customers
+#
+. token
+curl -v -H "X-AUTH-TOKEN: $TOKEN" localhost:5002/api/v1/customers

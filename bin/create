@@ -1,0 +1,6 @@
+#! /bin/bash
+#
+# create => # POST /api/v1/customers
+#
+. token
+curl -v -X POST -H "X-AUTH-TOKEN: $TOKEN" -H "Content-Type: application/json" -d '{"customer":{"email":"davdmcnelis@gmail.com", "company":"", "name_last":"McNelis", "name_first":"Dave", "phone":"203-123-9876", "address":"123 Main Street", "city":"Woodbridge", "state":"CT", "postal":"01233"}}' localhost:5002/api/v1/customers

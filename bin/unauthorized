@@ -1,0 +1,5 @@
+#! /bin/bash
+#
+# index => # GET /api/v1/customers
+#
+curl -v localhost:5002/api/v1/customers

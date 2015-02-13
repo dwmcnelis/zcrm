@@ -1,0 +1,5 @@
+#! /bin/bash
+# Valid Token
+TOKEN=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiI5NzUzIiwiZXhwIjpudWxsfQ.sDg1qCCcKIo_290O6jIk7fnYDU6b6by0LweFYlW6iqE
+# Invalid Token
+#TOKEN=yeJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiI5NzUzIiwiZXhwIjpudWxsfQ.sDg1qCCcKIo_290O6jIk7fnYDU6b6by0LweFYlW6iEq

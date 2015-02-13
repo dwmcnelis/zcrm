@@ -1,0 +1,6 @@
+#! /bin/bash
+#
+# update => # PUT /api/v1/customers/:id
+#
+. token
+curl -v -X PUT -H "X-AUTH-TOKEN: $TOKEN" -H "Content-Type: application/json" -d '{"customer":{"email":"mikel@franeckilang.name", "company":"XXAcme", "name_last":"Heidenreich", "name_first":"Lyla", "phone":"785-613-0946", "address":"123 Main Street", "city":"Woodbridge", "state":"CT", "postal":"01233"}}' localhost:5002/api/v1/customers/1

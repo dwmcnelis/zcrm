@@ -1,0 +1,6 @@
+#! /bin/bash
+#
+# options => # OPTIONS /api/v1/customers
+#
+#. token
+curl -v -X OPTIONS localhost:5002/api/v1/customers

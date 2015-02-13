@@ -1,0 +1,30 @@
+<?php
+// module/Customer/view/customer/customer/index.phtml:
+
+$title = 'My customers';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+<p>
+    <a href="<?php echo $this->url('customer', array('action'=>'add'));?>">Add new customer</a>
+</p>
+
+<table class="table">
+<tr>
+    <th>Email</th>
+    <th>Name</th>
+    <th>&nbsp;</th>
+</tr>
+<?php foreach ($customers as $customer) : ?>
+<tr>
+    <td><?php echo $this->escapeHtml($customer->email);?></td>
+    <td><?php echo $this->escapeHtml($customer->name_full);?></td>
+    <td>
+        <a href="<?php echo $this->url('customer',
+            array('action'=>'edit', 'id' => $customer->id));?>">Edit</a>
+        <a href="<?php echo $this->url('customer',
+            array('action'=>'delete', 'id' => $customer->id));?>">Delete</a>
+    </td>
+</tr>
+<?php endforeach; ?>
+</table>

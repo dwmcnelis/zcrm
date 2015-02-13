@@ -1,0 +1,6 @@
+#! /bin/bash
+#
+# delete => # DELETE /api/v1/customers/:id
+#
+. token
+curl -v -X DELETE -H "X-AUTH-TOKEN: $TOKEN" localhost:5002/api/v1/customers/34
