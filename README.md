@@ -46,6 +46,9 @@ CustomerAPIController | API controller for Customer Routes
 ### Database
 #### SQLite
 Stored in data/database.db
+
+Customer schema and seed data in module/Customer/data/customer.sql
+
 #### Tables
 Table | Purpose
 ------------ | -------------
