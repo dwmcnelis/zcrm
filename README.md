@@ -12,7 +12,7 @@
 route | Purpose
 ------------ | -------------
 /customer | Index customers
-customer/edit/[:id] | Edit customer
+customer/edit/:id | Edit customer
 
 
 ## Implemetation Notes
@@ -83,11 +83,14 @@ X-AUTH-TOKEN | eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1aWQiOiI5NzUzIiwiZXhwIjpu
 ## API Routes
 method | route | Purpose
 ----------- | ------------ | -------------
-GET | /customer | Index customers
-GET | /customer/email/pattern | Search customers by email
-GET | /customer/name/pattern | Search customers by email
-GET | /customer | Index customers
-GET | customer/edit/[:id] | Edit customer
+OPTIONS | /api/v1/customer | Index customers
+GET | /api/v1/customer | Index customers
+GET | /api/v1/customer/email/:q | Search customers by email
+GET | /api/v1/customer/name/:q | Search customers by email
+POST | /api/v1/customer | Create new customer
+GET | /api/v1/customer/:id | Read a customer
+PUT | /api/v1/customer/:id | Update a customer
+DELETE | /api/v1/customer/:id | Delete a customer
 
 
 
